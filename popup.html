@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot - Message Streaming</title>
+    <style>
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
+      }
+
+      body {
+        width: 700px;
+        height: 500px;
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      table {
+        border-collapse: collapse;
+        padding: 4px;
+        width: 100%;
+        table-layout: fixed;
+      }
+      table td, table th {
+        border: 1px solid #d2d2d2;
+        padding: 4px;
+      }
+      
+      table td p, table th p {
+        padding: 0;
+        margin: 0;
+      }
+      
+      pre{
+        padding: 10px;
+      }
+      
+      pre, code{
+        background: #4b4b4b;
+        overflow-x: auto;
+        color: #e7e7e7;
+      }
+
+      .chat-message{
+        width: 80%;
+        padding: 10px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+        line-height: 28px;
+      }
+      .assistant-message{
+        width: 90%;
+        float: left;
+        text-align: left;
+        border-left: solid 2px #9dc742;
+      }
+
+      .user-message{
+        width: 90%;
+        float: right;
+        text-align: right;
+        font-weight: bold;
+        color: #333;
+        border-right: solid 2px #57c7a7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chatbot - Message Streaming</h1>
+    <input id="message-input" type="text" placeholder="Type a message...">
+    <button id="send-button">Send</button>
+
+    <div id="chat-log"></div>
+    <script type="module" src="popup.js"></script>    
+  </body>
+</html>
